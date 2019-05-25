@@ -23,9 +23,9 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={({ site }) => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={site.siteMetadata.title} />
         <div
           style={{
             margin: `0 auto`,
