@@ -12,6 +12,11 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
+
+fetch("/.netlify/functions/hello")
+  .then(response => response.json())
+  .then(console.log)
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
