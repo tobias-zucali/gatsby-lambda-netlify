@@ -20,7 +20,6 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "http-proxy-middleware": "^0.19.1",
     "netlify-cli": "^2.11.19",
     "netlify-lambda": "^1.4.13",
     "npm-run-all": "^4.1.5",
@@ -34,10 +33,11 @@
     "build": "run-p build:**",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/functions",
-    "develop": "gatsby develop",
+    "dev": "npm run start",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "netlify:dev": "gatsby develop",
     "start": "run-p start:**",
-    "start:app": "npm run develop",
+    "start:dev": "netlify dev",
     "start:lambda": "netlify-lambda serve src/functions",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

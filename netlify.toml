@@ -13,9 +13,10 @@
   
   # (optional) Settings for Netlify Dev
   # https://github.com/netlify/netlify-dev-plugin#project-detection
-  # [dev] 
-  #  command = "npm run develop" # Command to start your dev server
-  #  port = 3000 # Port that the dev server will be listening on
-  #  publish = "dist" # Folder with the static content for _redirect file
+[dev] 
+  command = "npm run netlify:dev" # Command to start your dev server
+  port = 8000 # Port that the dev server will be listening on
+  functions = "functions"
+  publish = "public"
   
   ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/ 
